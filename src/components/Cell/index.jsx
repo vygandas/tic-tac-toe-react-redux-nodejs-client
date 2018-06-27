@@ -13,6 +13,13 @@ class Cell extends Component {
         this.markHandler = this.markHandler.bind(this);
     }
 
+    componentDidMount() {
+        this.setState({
+            owner: this.props.takenBy === null ? null : this.props.takenBy,
+            isMarked: this.props.takenBy !== null
+        });
+    }
+
     markHandler(x, y, owner) {
         this.setState({
             isMarked: true,
@@ -24,7 +31,7 @@ class Cell extends Component {
     render() {
         return (
             <div className="cell" onClick={() => !this.state.isMarked && this.markHandler(this.props.x, this.props.y, this.props.owner)}>
-                {this.state.isMarked && <span className="owner">{this.state.owner}</span>}
+                {this.props.takenBy && <span className="owner">{this.props.takenBy}</span>}
             </div>
         );
     }

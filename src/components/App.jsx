@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Loader from './Loader';
 import Grid from './Grid/index';
+import ActionsLog from './ActionsLog';
 
 class App extends Component {
 
@@ -19,6 +20,8 @@ class App extends Component {
 
                 <h1 className='title'>TIC TAC TOE</h1>
                 <h2 className="server-messages">{this.props.message}</h2>
+
+                <ActionsLog/>
             </div>
         );
     }
