@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import './style.scss';
 
@@ -12,12 +12,12 @@ class Loader extends Component {
     render() {
         return (
             <div className='vp-loader'>
-                {!this.state.loading && this.props.children}
+                {!this.props.loading && this.props.children}
             </div>
         );
     }
 }
 
 export default connect(
-    state => ({loading: state.loading}),
+    state => ({ loading: state.game.loading }),
 )(Loader);
