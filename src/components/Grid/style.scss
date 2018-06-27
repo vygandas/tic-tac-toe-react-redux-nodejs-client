@@ -11,6 +11,7 @@
         box-shadow: 0 0 50px rgba(0, 0, 0, 0.48);
         background-color: $color_header;
         padding: 5px 2px 0px 3px;
+        align-items: center;
     }
 
     .cell {
@@ -19,10 +20,29 @@
         width: 40px;
         margin-bottom: 5px;
         background-color: #999;
+        text-align: center;
+
+        .owner {
+            font-size: 80px;
+            line-height: 113px;
+            color: #e2e2e2;
+        }
+
     }
 
-    .cell:nth-child(3n) {
-        background-color: #F00;
+    .btn {
+        border-radius: 30px;
+        padding: 10px 25px;
+        font-size: 26px;
+        color: $color_header;
+        background: #2d3b44;
+        border: thin solid #5d7788;
+        cursor: pointer;
+
+        &:hover {
+            background: #1f2931;
+        }
+
     }
 
 }

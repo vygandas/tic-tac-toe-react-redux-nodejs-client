@@ -25,7 +25,7 @@ class Cell extends Component {
     render() {
         return (
             <div className="cell" onClick={() => this.markHandler(this.props.x, this.props.y, this.props.owner)}>
-                {this.state.isMarked && this.state.owner}
+                {this.state.isMarked && <span className="owner">{this.state.owner}</span>}
             </div>
         );
     }

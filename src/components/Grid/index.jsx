@@ -34,6 +34,7 @@ class Grid extends Component {
                         <Cell x={2} y={2} owner={this.props.owner} click={this.props.mark} />
                     </div>
                 }
+                {this.props.gameOver && <button className="btn" onClick={() => this.props.reset()}>Restart!</button>}
 
             </div>
         );

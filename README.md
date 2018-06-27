@@ -1,5 +1,7 @@
 # Tic-Tac-Toe game server written with Node.js
 
+![TIC TAC TOE Game](https://github.com/vygandas/tic-tac-toe-react-redux-nodejs-client/blob/master/screenshot.png)
+
 ### Start
 
 ````bash

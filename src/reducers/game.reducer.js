@@ -15,7 +15,7 @@ export const game = (state = initialState, action) => {
     case HIDE_LOADING:
         return { ...state, loading: false };
     case RESET:
-        return { ...state, ...action.payload };
+        return { ...state, ...action.payload, ...{ turnFor: 'X' } };
     case MARK:
         return { ...state, ...action.payload, ...{ turnFor: state.turnFor === 'X' ? 'O' : 'X' } };
     default:
