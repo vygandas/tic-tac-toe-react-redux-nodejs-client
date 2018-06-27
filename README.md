@@ -2,6 +2,8 @@
 
 ![TIC TAC TOE Game](https://github.com/vygandas/tic-tac-toe-react-redux-nodejs-client/blob/master/screenshot.png)
 
+Game server can be found at https://github.com/vygandas/tic-tac-toe-react-redux-nodejs-server
+ 
 ### Start
 
 ````bash
