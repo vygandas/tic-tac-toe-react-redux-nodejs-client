@@ -4,35 +4,27 @@ import {API_URL} from '../config/api.config';
 
 export function reset() {
 
-    return dispatch => { // this is Thunk library feature
-
-        const request = axios.get(`${API_URL}/reset`)
-            .then(response => {
-                console.log('response', response);
-                dispatch({
-                    type: RESET,
-                    payload: response.data
-                });
-            })
+    return dispatch => {
+        axios.get(`${API_URL}/reset`)
+            .then(response => dispatch({
+                type: RESET,
+                payload: response.data
+            }))
             .catch(() => {
-
+                // Terrible fail :(
             });
     };
 }
 
 export function mark(x, y) {
-    return dispatch => { // this is Thunk library feature
-
-        const request = axios.get(`${API_URL}/mark?x=${x}&y=${y}`)
-            .then(response => {
-                console.log('response', response);
-                dispatch({
-                    type: MARK,
-                    payload: response.data
-                });
-            })
+    return dispatch => {
+        axios.get(`${API_URL}/mark?x=${x}&y=${y}`)
+            .then(response => dispatch({
+                type: MARK,
+                payload: response.data
+            }))
             .catch(() => {
-
+                // Terrible fail :(
             });
     };
 }

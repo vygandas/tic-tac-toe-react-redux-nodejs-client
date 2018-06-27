@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import Loader from './Loader';
 import Grid from './Grid/index';
 
-
-
 class App extends Component {
 
     constructor() {

@@ -17,25 +17,25 @@ class Grid extends Component {
         this.props.reset();
     }
 
+    generateGrid(size) {
+        const gridCells = [];
+        for (let y = 0; y < size; y++) {
+            for (let x = 0; x < size; x++) {
+                gridCells.push(<Cell x={x} y={y} owner={this.props.owner} click={this.props.mark} key={`${x}:${y}`} />);
+            }
+        }
+        return gridCells;
+    }
+
     render() {
         return (
             <div className='vp-grid'>
-
                 {!this.props.gameOver &&
                     <div className="grid">
-                        <Cell x={0} y={0} owner={this.props.owner} click={this.props.mark} />
-                        <Cell x={1} y={0} owner={this.props.owner} click={this.props.mark} />
-                        <Cell x={2} y={0} owner={this.props.owner} click={this.props.mark} />
-                        <Cell x={0} y={1} owner={this.props.owner} click={this.props.mark} />
-                        <Cell x={1} y={1} owner={this.props.owner} click={this.props.mark} />
-                        <Cell x={2} y={1} owner={this.props.owner} click={this.props.mark} />
-                        <Cell x={0} y={2} owner={this.props.owner} click={this.props.mark} />
-                        <Cell x={1} y={2} owner={this.props.owner} click={this.props.mark} />
-                        <Cell x={2} y={2} owner={this.props.owner} click={this.props.mark} />
+                        {this.generateGrid(3)}
                     </div>
                 }
                 {this.props.gameOver && <button className="btn" onClick={() => this.props.reset()}>Restart!</button>}
-
             </div>
         );
     }

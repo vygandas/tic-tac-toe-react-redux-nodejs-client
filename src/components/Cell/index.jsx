@@ -19,12 +19,11 @@ class Cell extends Component {
             owner
         });
         this.props.click(x, y);
-        console.log(x, y);
     }
 
     render() {
         return (
-            <div className="cell" onClick={() => this.markHandler(this.props.x, this.props.y, this.props.owner)}>
+            <div className="cell" onClick={() => !this.state.isMarked && this.markHandler(this.props.x, this.props.y, this.props.owner)}>
                 {this.state.isMarked && <span className="owner">{this.state.owner}</span>}
             </div>
         );
