@@ -1,4 +1,4 @@
-# Tic-Tac-Toe game server written with Node.js
+# Tic-Tac-Toe game client written with React + Redux
 
 ![TIC TAC TOE Game](https://github.com/vygandas/tic-tac-toe-react-redux-nodejs-client/blob/master/screenshot.png)
 
