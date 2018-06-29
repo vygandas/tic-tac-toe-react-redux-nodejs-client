@@ -19,7 +19,7 @@ class ActionsLog extends Component {
         return (
             <div className='vp-actions-log'>
                 <div className="vp-inner">
-                    {this.props.log && this.props.log.map(l => <div className="vp-log-item">{l.message}</div>)}
+                    {this.props.log && this.props.log.map((l, i) => <div className="vp-log-item" key={`msg-${i}`}>{l.message}</div>)}
                 </div>
             </div>
         );
