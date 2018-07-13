@@ -6,12 +6,6 @@ Game server can be found at https://github.com/vygandas/tic-tac-toe-react-redux-
  
 ## Task
 
-_X_|___|___ 
-
-___|_X_|___ 
-
-___|___| X
-
 Basic requirements:
 
 * Two users play a game of tick-tack-toe on the same computer 
